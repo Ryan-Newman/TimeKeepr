@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ryan Newman\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj": {}
+    "C:\\Users\\lukep\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ryan Newman\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj": {
+    "C:\\Users\\lukep\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ryan Newman\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj",
+        "projectUniqueName": "C:\\Users\\lukep\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj",
         "projectName": "TimeKeepr",
-        "projectPath": "C:\\Users\\Ryan Newman\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj",
-        "packagesPath": "C:\\Users\\Ryan Newman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ryan Newman\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\obj\\",
+        "projectPath": "C:\\Users\\lukep\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\TimeKeepr.csproj",
+        "packagesPath": "C:\\Users\\lukep\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lukep\\Desktop\\TimeKeepr\\TimeKeepr\\TimeKeepr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ryan Newman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lukep\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
