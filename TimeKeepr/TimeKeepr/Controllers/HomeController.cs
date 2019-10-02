@@ -13,23 +13,8 @@ namespace TimeKeepr.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        bool started = false;
-
-        bool ended = false;
-
-        static Stopwatch stopwatch = new Stopwatch();
-
-        static DateTime startTime;
-
-        static DateTime endTime;
-
-        static string stopwatchString;
-
-        static string[] stopwatchList;
-
-        double currentTotal;
-
-        double total;
+        TimeTracking timeTracker = new TimeTracking();
+       
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -44,57 +29,37 @@ namespace TimeKeepr.Controllers
 
         public IActionResult Start()
         {
-            stopwatch.Start();
-            startTime = DateTime.Now;
-            ViewBag.Start = true;
-            started = true;
-            ViewBag.End = false;
-            ended = false;
+            timeTracker.Start();
+            var (startTime, isStart, isEnd) = timeTracker.Start();
+            ViewBag.Start = isStart;
+            ViewBag.End = isEnd;
+            ViewBag.StartTime = startTime;
             return View("Index");
         }
 
         public IActionResult End()
         {
-            var user = User.Identity.Name;
-            var permission = User.IsInRole("admin");
 
-            if (started || ended == false && started == false)
+            //var user = User.Identity.Name;
+            //var permission = User.IsInRole("admin");
+
+            try
             {
-                stopwatch.Stop();
-
-                endTime = DateTime.Now;
+                var (startTime, endTime, started, ended,
+                currentTotal, total) = timeTracker.End();
                 ViewBag.StartTime = startTime;
                 ViewBag.EndTime = endTime;
-                var totalTime = stopwatch.Elapsed;
-                stopwatchString = stopwatch.Elapsed.ToString();
-                stopwatchList = stopwatchString.Split(":");
-                var trimIndex = stopwatchList[2].IndexOf(".");
-                var hours = Convert.ToInt32(stopwatchList[1]);
-                var minutes = Convert.ToInt32(stopwatchList[2].Remove(trimIndex - 1, stopwatchList[2].Length - 1));
-
-
-                if (hours > 0)
-                {
-                    currentTotal = Convert.ToInt32(hours) * 60 + Convert.ToInt32(minutes);
-                }
-                else if (minutes < 5)
-                {
-                    currentTotal = 5;
-                }
-                else
-                {
-                    currentTotal = Convert.ToInt32(stopwatchList[2]);
-                }
                 ViewBag.Current = currentTotal;
-                this.total += currentTotal;
                 ViewBag.Total = total;
+                ViewBag.Start = started;
+                ViewBag.End = ended;
             }
-            ViewBag.Start = false;
-            started = false;
-            ViewBag.End = true;
-            ended = true;
-            stopwatch.Reset();
-            return View();
+            catch(Exception)
+            {
+            }
+
+            return View("Index");
+
         }
         public IActionResult Privacy()
         {
