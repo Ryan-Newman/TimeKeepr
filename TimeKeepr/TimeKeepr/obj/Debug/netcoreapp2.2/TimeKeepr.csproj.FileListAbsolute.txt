@@ -32,3 +32,4 @@ C:\Users\Ryan Newman\Desktop\TimeKeepr\TimeKeepr\TimeKeepr\obj\Debug\netcoreapp2
 C:\Users\Ryan Newman\Desktop\TimeKeepr\TimeKeepr\TimeKeepr\obj\Debug\netcoreapp2.2\TimeKeepr.dll
 C:\Users\Ryan Newman\Desktop\TimeKeepr\TimeKeepr\TimeKeepr\obj\Debug\netcoreapp2.2\TimeKeepr.pdb
 C:\Users\Ryan Newman\Desktop\TimeKeepr\TimeKeepr\TimeKeepr\obj\Debug\netcoreapp2.2\TimeKeepr.csproj.CopyComplete
+C:\Users\Ryan Newman\Desktop\TimeKeepr\TimeKeepr\TimeKeepr\obj\Debug\netcoreapp2.2\Razor\Views\Home\End.cshtml.g.cs
